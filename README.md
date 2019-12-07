@@ -141,7 +141,7 @@ Lazy free というのは linux-mm ローカルな言葉ですが、具体的な
 
 `MADV_WIPEONFORK` は v4.14 で追加されたフラグで、shared mapping されたメモリのデータが fork を通して子プロセスに見えてしまうことを防ぐというものです。[コミットログ](https://github.com/torvalds/linux/commit/d2cd9ede6e193dd7d88b6d27399e96229a551b19)にはサーバプロセスの乱数シードの秘匿や、暗号関連の処理において有用と説明されています。類似の `MADV_DONTFORK` (子プロセスから当該メモリにアクセスしようとする segmentation fault) と違って子プロセスからのアクセス時はゼロクリアされたメモリを見せる動作をします。
 
-これは[簡単なプログラム](TODO:URL 追記)で動作確認できます。
+これは[簡単なプログラム](https://github.com/Naoya-Horiguchi/madvise_demo/blob/master/sample1.c)で動作確認できます。
 ~~~
 $ ./sample1
 mapped address: 0x700000000000

@@ -45,10 +45,10 @@ int main(int argc, char *argv[]) {
 
 	switch(mapflag) {
 	case 0:
-		mapflag = MAP_PRIVATE|MAP_ANONYMOUS; 
+		mapflag = MAP_PRIVATE|MAP_ANONYMOUS;
 		break;
 	case 1:
-		mapflag = MAP_SHARED|MAP_ANONYMOUS; 
+		mapflag = MAP_SHARED|MAP_ANONYMOUS;
 		break;
 	case 2:
 		mapflag = MAP_PRIVATE;
