@@ -1,3 +1,5 @@
+# `madvise` の新規フラグについて
+
 本記事は [Linux Advent Calendar](https://qiita.com/advent-calendar/2019/linux) の 12/9 分の記事です。
 
 カーネル v5.4 で `madvise()` に新しいフラグとして `MADV_COLD` と `MADV_PAGEOUT` というフラグが追加されました。ちょうどよいタイミングなので、本記事ではこれらのフラグの動作と追加された背景などについて簡単に調べたものを共有します。
